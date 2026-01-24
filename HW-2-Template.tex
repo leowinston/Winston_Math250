@@ -1,0 +1,90 @@
+\documentclass[10pt,twoside]{article}
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts, epsfig, graphicx, dsfont,
+  bbm, bbold, url, color, setspace, multirow,pinlabel}
+\usepackage[all]{xy}
+
+\usepackage{fancyhdr} \setlength{\voffset}{-1in}
+\setlength{\topmargin}{0in} \setlength{\textheight}{9.5in}
+\setlength{\textwidth}{6.5in} \setlength{\hoffset}{0in}
+\setlength{\oddsidemargin}{0in} \setlength{\evensidemargin}{0in}
+\setlength{\marginparsep}{0in} \setlength{\marginparwidth}{0in}
+\setlength{\headsep}{0.25in} \setlength{\headheight}{0.5in}
+\pagestyle{fancy}
+
+\onehalfspace
+
+\fancyhead[LO,LE]{Math 250 - Neha Gupta} \fancyhead[RO,RE]{Relevant for Quiz 2 on 01/28}
+\chead{\textbf{}} \cfoot{}
+\fancyfoot[LO,LE]{} \fancyfoot[RO,RE]{Page \thepage\ of
+  \pageref{LastPage}} \renewcommand{\footrulewidth}{0.5pt}
+\parindent 0in
+%% ------------------------------------------------------%%
+%% -------------------Begin Document---------------------%%
+%% ------------------------------------------------------%%
+\begin{document}
+
+\begin{center}
+\huge{\bf{Homework 2} - Student Name (First and Last)}
+\end{center}
+
+\medskip
+
+\noindent \large{\textbf{Collaborators:}}
+
+\medskip
+
+\begin{enumerate}
+\item Read Sections 1.2, 1.3
+	\item \#1.1.4: Write the negation of each of the following statements.
+		\begin{itemize}
+	\item[a.] All triangles are isosceles. 
+	 \begin{proof}[Answer]
+	    \end{proof}
+	\item[b.]
+	\item[c.]
+	\item[e.]
+	\end{itemize}
+	\item 1.1: \#5(a, b, e) 
+         \item 1.2: \#2(d)
+	\item 1.2: \#5(a,b,c,d)
+	\item 1.2: \#3 
+	\item 1.2: \#D4
+	\item 1.1: \#6
+	\item 1.2: \#9
+        \item 1.3: \#2
+        \item 1.3: \#6
+          \item Use truth tables to prove that each of the following statement forms are \emph{not} tautologies. These implication are common logical fallacies (errors in reasoning) since the conclusion does not follow from the hypotheses.
+  		 \begin{enumerate}
+  			  \item $[(P\Rightarrow Q)\wedge Q]\Rightarrow P$
+  			  \item $[(P\Rightarrow Q)\wedge\neg{P}]\Rightarrow\neg{Q}$
+ 		\end{enumerate}
+		\item Use truth tables to prove that each of the following statement forms are tautologies. These are the four most important ``rules of inference'' in propositional logic. Each rule gives a conclusion that follows from a set of hypotheses and thus give building blocks for correct proofs.
+		\newpage
+ 		 \begin{enumerate}
+   			\item $[P\wedge(P\Rightarrow Q)]\Rightarrow Q$
+			\begin{proof}[Answer]
+			Here is the truth table: 
+			
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+P & Q & P $\Rightarrow$ Q & P $\wedge$ (P $\Rightarrow$ Q)  & [P $\wedge$ (P $\Rightarrow$ Q)] $\Rightarrow$ P\\ 
+\hline 
+T & T & blah & bla & blaa \\
+T & F & blah & bla & blaa \\
+F & T  & blah & bla & blaa \\
+F & F  & blah & bla & blaa \\
+\end{tabular}
+\end{center}
+		
+			\end{proof}
+			\item $[\neg Q\wedge(P\Rightarrow Q)]\Rightarrow\neg{P} $
+			\item $[(P\Rightarrow Q)\wedge(Q\Rightarrow R)]\Rightarrow(P\Rightarrow R)$
+    			\item $[(P\vee Q)\wedge\neg{P}]\Rightarrow Q$
+		\end{enumerate}
+
+  	\end{enumerate}
+
+
+\label{LastPage}
+\end{document}
