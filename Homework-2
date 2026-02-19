@@ -1,0 +1,249 @@
+\documentclass[10pt,twoside]{article}
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts, epsfig, graphicx, dsfont,
+  bbm, bbold, url, color, setspace, multirow,pinlabel}
+\usepackage[all]{xy}
+
+\usepackage{fancyhdr} \setlength{\voffset}{-1in}
+\setlength{\topmargin}{0in} \setlength{\textheight}{9.5in}
+\setlength{\textwidth}{6.5in} \setlength{\hoffset}{0in}
+\setlength{\oddsidemargin}{0in} \setlength{\evensidemargin}{0in}
+\setlength{\marginparsep}{0in} \setlength{\marginparwidth}{0in}
+\setlength{\headsep}{0.25in} \setlength{\headheight}{0.5in}
+\pagestyle{fancy}
+
+\onehalfspace
+
+\fancyhead[LO,LE]{Math 250 - Neha Gupta} \fancyhead[RO,RE]{Relevant for Quiz 2 on 01/28}
+\chead{\textbf{}} \cfoot{}
+\fancyfoot[LO,LE]{} \fancyfoot[RO,RE]{Page \thepage\ of
+  \pageref{LastPage}} \renewcommand{\footrulewidth}{0.5pt}
+\parindent 0in
+%% ------------------------------------------------------%%
+%% -------------------Begin Document---------------------%%
+%% ------------------------------------------------------%%
+\begin{document}
+
+\begin{center}
+\huge{\bf{Homework 2} - Leo Winston}
+\end{center}
+
+\medskip
+
+\noindent \large{\textbf{Collaborators:}}
+
+\medskip
+
+\begin{enumerate}
+\item Read Sections 1.2, 1.3
+	\item \#1.1.4: Write the negation of each of the following statements.
+		\begin{itemize}
+	\item[a.] All triangles are isosceles. 
+	 \begin{proof}[There exists some triangles that are not isosceles.]
+	    \end{proof}
+	\item[b.] Some even numbers are multiples of three.
+    \begin{proof}[No even numbers are multiples of three.]
+        \end{proof}
+	\item[c.] Every door in the building was locked.
+    \begin{proof}[Some doors in the building were unlocked.]
+        \end{proof}
+	\item[e.] Some angles of a triangle are greater than 90 degrees.
+    \begin{proof}[All angles of a triangle are less than or equal to 90 degrees.]
+        \end{proof}
+	\end{itemize}
+	\item 1.1: \#5(a, b, e) 
+    \begin{itemize}
+    \item[a.] $P:$ There is a real number x such that $x^2+x+1=0.$
+    \begin{proof}[$\neg P: \forall x \in \mathbb{R}, x^2+x+1\ne0$]
+        \end{proof}
+    \item[b.] $P:$ Every real number is less than 100.
+    \begin{proof}[$\neg P:$ $\exists x \in \mathbb{R} \ni x\ge 100$]
+        \end{proof}
+    \item[e.] P: $\forall x \in \mathbb{R}, \exists y \in\mathbb{R} \ni y=x^3$
+    \end{itemize}
+    \begin{proof}[$\neg$P: $\exists x \in \mathbb{R} \ni \forall y \in \mathbb{R}, y \ne x^3$]
+        \end{proof}
+         \item 1.2: \#2(d) $((\neg P) \wedge (\neg Q)) \vee Q $
+    \begin{center}
+    \begin{tabular}{|c|c||c||c||c||c|}
+    \hline
+    $P$ & $Q$ & $\neg P$ & $\neg Q$ & $\neg P \wedge \neg Q$ & $(\neg P \wedge \neg Q) \vee Q$\\
+    \hline
+    \hline
+    T & T & F & F & F & T\\ \hline
+    T & F & F & T & F & F\\ \hline
+    F & T & T & F & F & T\\ \hline
+    F & F & T & T & T & T\\ \hline
+    \end{tabular}
+    \end{center}
+	\item 1.2: \#5(a,b,c,d)
+    \begin{itemize}
+    \item[a.] 
+    $P:$ If $x,y \in \mathbb{R} \ni xy=0,$ then $(x=0) \vee (y=0)$
+    \begin{proof}
+          [$\neg P: $ If $x,y \in \mathbb{R} \ni xy=0,$ then $(x \ne 0) \wedge (y \ne 0)$]
+    \end{proof}
+    \item[b.]
+   $P: \forall x \in \mathbb{Z}, (x^2 \text{ is odd}) \wedge (x^3 - 1 \equiv 0 \pmod{4})$
+    \begin{proof}
+    [$\neg P: \exists x \in \mathbb{Z} \ni (x^2$ is even) $\vee (x^3-1 \not\equiv 0 \pmod 4$]
+    \end{proof}
+    \item[c.]
+    $P: \forall n \in \mathbb{R}, \exists k \in \mathbb{Z} \ni n=2k, n=2k+1$
+    \begin{proof}
+    [$\neg P: \exists n \ni \forall k \in \mathbb{Z}, (n\ne2k) \wedge (n\ne 2k+1)$]
+    \end{proof}
+    \item[d.] $P: \exists r \in \mathbb{Q} \ni 1 <r <2$
+    \begin{proof}
+    [$\neg P: \forall r \in \mathbb{Q}, (r\le1) \vee (r\ge2) $]
+    \end{proof}
+    \end{itemize}
+	\item 1.2: \#3 
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c}
+    $P$ & $Q$ & $\neg P$ & $\neg Q$ & $(\neg P) \vee Q $ & $\neg((\neg P) \vee Q)$ & $P \wedge (\neg Q)$ \\
+    \hline
+    T & T & F & F & T & F & F \\
+    T & F & F & T & F & T & T \\
+    F & T & T & F & T & F & F \\
+    F & F & T & T & T & F & F
+    \end{tabular}
+    \end{center}
+    \begin{proof}
+    The truth column of $\neg((\neg P) \vee Q)$ and $P \wedge (\neg Q)$ are consistent for all truth values of $P$ and $Q$, $\therefore$ $\neg((\neg P) \vee Q) \equiv P \wedge (\neg Q)$
+    \end{proof}
+	\item 1.2: \#D4 
+    $P:$ Math tests are long or difficult
+    \begin{proof}[$\neg P:$ There exists a math test that is not long and not difficult.]
+    \end{proof}
+	\item 1.1: \#6
+    \begin{itemize}
+    \item[a.]
+    $\forall x \in \mathbb{Z},$ if x is an even number, then $x^2 \equiv 0 \pmod 4$
+    \item[b.]
+    $\exists$ an even number $x \ni x^2 \not\equiv 0\pmod 4$
+    \item[c.]
+    Let $x \in \mathbb{Z},$ if $x$ is an even number, then $x=2n$ for some $n \in \mathbb{Z}.$ So, $x^2=(2n)^2=4n^2$. Since every even number squared is divisible by $4,$ and $n^2$ is an integer since the set of integers is closed under multiplication,$\forall x$ in the set of even integers, $x^2 \equiv 0\pmod 4$. $ \therefore P$ is true, and $\neg P$ is false. $\qed$
+    \end{itemize}
+	\item 1.2: \#9
+    $P:$ If $n$ is an odd integer, then there exists an integer $x$ such that $n=4x+1$ or $n=4x+3$.
+    \item[a.]
+    $\neg P: $ There exists an odd integer, $n$ such that $\forall x \in \mathbb{Z}, (n \ne 4x+1) \wedge (n \ne 4x+3)$.
+    \item[b.]
+    If $n$ is an odd integer, then $n=2x+1$ for some $x \in \mathbb{Z}$. Since $x$ is an integer, it can be either even or odd: $(x=2j) \vee (x=2k+1)$ for $j,k \in \mathbb{Z}$. Given these two possibilities, $n=2(2j)+1=4j+1$ or $n=2(2k+1)+1=4k+3$. Since $k$ and $j$ are both integers, this is equivalent to the statement that for an odd integer $n$, it can be represented as either $n=4x+1$ or $n=4x+3$. $\therefore P$ is true and $\neg P$ is false. $\qed$
+        \item 1.3: \#2
+        \begin{itemize}
+        \item[a.]
+        \begin{itemize}
+        \item[I.]
+        $P: \forall T$ in the set of equilateral triangles, If $\theta_1,\theta_2, \theta_3$ are the angles of T, then $\theta_1 = \theta_2 = \theta_3$.
+        \item[II.]
+        $\neg P:\exists T$ in the set of the equilateral triangles $\ni$ if $\theta_1, \theta_2, \theta_3$ are the angles of T, $\theta_1 \ne \theta_2 \ne \theta_2$
+        $\exists $
+        \end{itemize}
+        \item[b.]
+        \begin{itemize}
+        \item[I.]$P: \forall x \in  \mathbb{N}$ if $x>0$, then $x \ge1$.
+        \item[II.]
+        $\neg P: \exists x \in \mathbb{N} \ni (x>0) \wedge (x<1)$
+        \end{itemize}
+        \item[c.]
+        \begin{itemize}
+        \item[I.]
+        $P: $ For all pairs of two integers $x,y \in \mathbb{Z}$, if $xy$ is even, then ($x$ is even) $\wedge$ ($y$ is even).
+        \item[II.]
+        $\neg P: \exists x,y \in \mathbb{Z} \ni (xy$ is even) $\wedge$ (($x$ is odd) $\vee$ ($y$ is odd)).
+        \end{itemize}
+        \item[d.]
+        \begin{itemize}
+        \item[I.]
+        $P: \forall a,c \in \mathbb{R},$ if $a<c$, then $ \exists b\in \mathbb{Q} \ni a<b<c$.
+        \item[II.]
+        $\neg P: \exists a,c \in \mathbb{R} \ni \forall b \in \mathbb{Q}, (b \le a) \vee (b \ge c)$
+        \end{itemize}
+        \end{itemize}
+        \item 1.3: \#6
+        The sum of the squares of two consecutive integers is odd.
+        \begin{itemize}
+        \item[a.]
+        $P: \forall x,y \in \mathbb{Z}$, if $(x<y) \wedge (\forall n \in \mathbb{Z}, (n<x<y) \vee (x<y<n))$, then $2\nmid x^2+y^2$
+        \item[b.]
+        $\neg P: \exists x,y \in \mathbb{Z} \ni ((x<y) \wedge (\forall n \in \mathbb{Z}, (n<x<y) \vee (x<y<n))) \wedge (2 \mid x^2 +y^2)$
+        \item[c.]
+        Let $x,y \in \mathbb{Z}$ and let $x$ and $y$ be consecutive integers such that $y=x+1$. $x$ may be either even or odd since $x$ is an integer. If $x$ is even, then $\exists n \in \mathbb{Z} \ni x=2n$ and $y=2n+1$, which makes $y$ an odd integer by definition. If $x$ is odd, then it would mean there exists $k \in \mathbb{Z} \ni x=2k+1$, and $y=2k+2=2(k+1)$. Since $k$ is an integer, and $1$ is an integer, and the integers are closed under addition, $k+1$ is an integer, thus $y$ is even under the definition of an even integer.\\
+        The sum of the square of an even number and the square of an odd number is equivalent to the square of an odd number and an even number since addition is commutative. Since two consecutive integers must be contain one even integer and one odd integer, the sum of their squares is equivalent regardless of the value of $2 \mid x$.
+        \begin{align*}
+        x^2+y^2=(2n)^2+(2n+1)^2\\
+        =4n^2+(4n^2+4n+1)\\
+        =8n^2+4n+1\\
+        =2(4n^2+2n)+1
+        \end{align*}
+        Since $n$ is an integer, and the integers are closed under addition and multiplication, $4n^2+2n$ must be an integer. Therefore, $x^2+y^2$, by definition of an odd number, must be odd. And since $x$ and $y$ are consecutive integers, the sum of the squares of two consecutive integers must be odd.
+        \end{itemize}
+          \item Use truth tables to prove that each of the following statement forms are \emph{not} tautologies. These implication are common logical fallacies (errors in reasoning) since the conclusion does not follow from the hypotheses.
+  		 \begin{enumerate}
+  			  \item $[(P\Rightarrow Q)\wedge Q]\Rightarrow P$
+                \begin{center}
+                \begin{tabular}{c|c|c|c|c}
+                $P$ & $Q$ & $P \Rightarrow Q$ & $(P \Rightarrow Q) \wedge Q$ & $((P \Rightarrow Q) \wedge Q) \Rightarrow P$ \\
+                \hline
+                T & T & T & T & T \\
+                T & F & F & F & T \\
+                F & T & T & T & F \\
+                F & F & T & F & T \\
+                \end{tabular}
+                \begin{proof}
+                Since the truth table represents the possible truth values for $((P \Rightarrow Q) \wedge Q) \Rightarrow P$, and the statement is false when $\neg P \wedge Q$, the statement is not a tautology, because not all inputs of $P$ and $Q$ result in a true statement.
+                \end{proof}
+                \end{center}
+  			  \item $[(P\Rightarrow Q)\wedge\neg{P}]\Rightarrow\neg{Q}$
+                \begin{center}
+                \begin{tabular}{c|c|c|c|c|c|c}
+                $P$ & $Q$ & $\neg P$ & $\neg Q$ & $P \Rightarrow Q$ & $(P \Rightarrow Q) \wedge \neg P$ & $[(P \Rightarrow Q) \wedge \neg P] \Rightarrow \neg Q$ \\
+                \hline
+                T & T & F & F & T & F & T\\
+                T & F & F & T & F & F & T\\
+                F & T & T & F & T & T & F\\
+                F & F & T & T & T & T & T\\
+                \end{tabular}
+                \begin{proof}
+                Since the statement $[(P \Rightarrow Q) \wedge \neg P] \Rightarrow \neg Q$ is false when $\neg P \wedge Q$, the statement is not a tautology because all possibilities of $P$ and $Q$ must be true.
+                \end{proof}
+                \end{center}
+                
+                
+ 		\end{enumerate}
+		\item Use truth tables to prove that each of the following statement forms are tautologies. These are the four most important ``rules of inference'' in propositional logic. Each rule gives a conclusion that follows from a set of hypotheses and thus give building blocks for correct proofs.
+
+		\newpage
+ 		 \begin{enumerate}
+   			\item $[P\wedge(P\Rightarrow Q)]\Rightarrow Q$
+			\begin{proof}[Answer]
+			Here is the truth table: 
+			
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+P & Q & P $\Rightarrow$ Q & P $\wedge$ (P $\Rightarrow$ Q)  & [P $\wedge$ (P $\Rightarrow$ Q)] $\Rightarrow$ P\\ 
+\hline 
+T & T & T & T & T   \\
+T & F & F & F & T   \\
+F & T  & T & F & T  \\
+F & F  & T & F & T  \\
+\end{tabular}
+\begin{proof}
+For every possible combination of $P$ and $Q$, the statement holds true, therefore the statement is a tautology
+\end{proof}
+\end{center}
+			\end{proof}
+			\item $[\neg Q\wedge(P\Rightarrow Q)]\Rightarrow\neg{P} $
+			\item $[(P\Rightarrow Q)\wedge(Q\Rightarrow R)]\Rightarrow(P\Rightarrow R)$
+    			\item $[(P\vee Q)\wedge\neg{P}]\Rightarrow Q$
+		\end{enumerate}
+
+  	\end{enumerate}
+
+
+\label{LastPage}
+\end{document}
+
+-67+33
