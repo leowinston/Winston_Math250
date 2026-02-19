@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{graphicx, dsfont, amssymb} % Required for inserting images
+\DeclareMathOperator{\mod}{mod}
+
+\title{Homework 1 - 1.1}
+\author{Leo Winston}
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Read chapter 1.1}
+\section{1(a,c,h,i,j,k)}
+a) Statement \\
+c) Neither \\
+h) Open Sentence \\ 
+i) Statement \\
+j) Statement \\
+k) Statement
+\section{2(a,d,e,i)}
+a) $\forall$ rectangles, the area of a rectangle is equal to its length times its width. (True)\\
+d) $\forall$ even integers $x$, odd integers $y$, $\exists$ an odd integer, $z$, such that $x+y=z$. \\
+e) $\forall$ even integers $x$, $\exists$ odd integers $y$, $z$ such that $x+y=z$. \\
+i) $\forall x \ge 0 \in \mathbb{R}, \exists y \in \mathbb{R}$ such that $\sqrt{x} =y$.
+\section{D5}
+j$\forall t_1,t_2 \in \mathbb{Z}$ if $x=2t_1$ and $y=2t_2$, then $x+y=2t_1 + 2t_2$. Then, we can factor out the 2: $x+y=2(t_1+t_2)$. If $t =t_1+t_2$, then $t\in \mathbb{Z}$ since $t_1,t_2 \in \mathbb{Z}$. Since $x+y=2t$ and $t$ is an integer, $x+y$ is even.\\
+or better:\\\\
+Let $x$ and $y$ be even integers. By definition there exists $t_1,t_2$ such that $x=t_1$, and $y=t_2$. Then, $x+y = 2t_1+2t_2$. Let $t=t_1+t_2$. Since the set of integers is closed under addition, $t \in \mathbb{Z}$. Because $x+y=2t$ for some integer $t$, we conclude that $x+y$ is even. Q.E.D
+\section{5}
+Begin by taking one candy from the box labeled "Mixed". This candy can have two possible values depending on the draw. Let the value be $P(x)$, which can take the value of either chocolate or mint. The correct label for the box labeled mixed is the value of $P(x)$. Then, the correct label for the box with the label $P(x)$ must be $\neg P(x)$. The final box, which has label $\neg P(x)$, should be changed to the mixed box. So the answer is 1 candy draw. The reason you must choose from the mixed box is because the box labeled chocolate and the box labeled mint both have the chance to be the mixed box, which would provide useless information.
+\section{6(a)(b)(c)}
+$\forall x\in $ the set of even integers, if $x\mod(4) = 0$
+\end{document}
