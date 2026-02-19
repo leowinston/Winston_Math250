@@ -1,7 +1,7 @@
 \documentclass[10pt,twoside]{article}
 
 \usepackage{amssymb,amsmath,amsthm,amsfonts, epsfig, graphicx, dsfont,
-  bbm, bbold, url, color, setspace, multirow,pinlabel,multicol}
+  bbm, bbold, url, color, setspace, multirow,pinlabel,multicol, marvosym}
 \usepackage[all]{xy}
 
 \usepackage{fancyhdr} \setlength{\voffset}{-1in}
@@ -27,7 +27,7 @@
 \begin{document}
 
 \begin{center}
-\huge{\bf{Homework 3} - Student Name (First and Last)}
+\huge{\bf{Homework 3} - Student Name Leo Winston}
 \end{center}
 
 \medskip
@@ -43,14 +43,30 @@
 ``If I don't work hard I will sleep. If I am worried I will not sleep. Thus, if I am worried I will work hard."
 \end{center}
 Is your friend's deduction logically correct? Justify your answer. 
-
+\begin{proof}
+Let Abe Charkow working hard be $P$, let Abe Charkow sleeping be $Q$, and let Abe Charkow worrying be $R$. Abe begins by saying, $\neg P \Rightarrow Q$ as well as $R \Rightarrow \neg Q$. By contrapositive equivalency, $\neg P \Rightarrow Q$ is the same as "if Abe does not sleep, then he worked hard", or $\neg Q \Rightarrow P$. \\ Whenever Abe worries, he will not sleep according to his second statement and not sleeping implies that he worked hard by the contrapositive of his first statement. Logically, this means: $R \Rightarrow \neg Q \Rightarrow P$. So, Abe's logical deduction is true. 
+\end{proof}
 \item \begin{enumerate}
 \item Give an example (not used in class) of a \textit{true} conditional statement with a \textit{false} converse, or explain why no such example can exist.
+\begin{proof}
+$P \Rightarrow Q:$If a shape is a square, then it must be a rectangle. (True) \\
+$Q \Rightarrow P:$ If a shape is a rectangle, then it must be a square. (False)
+\end{proof}
 \item Give an example (not used in class) of a \textit{true} conditional statement with a \textit{false} contrapositive, or explain why no such example can exist.
+\begin{proof}
+There is no such example of a true conditional statement with a false contrapositive since a statement and its contrapositive are logically equivalent  statements. If you look at their logic tables, there is no condition of $P$ or $Q$ that can make a true implication have a false contrapositive.
+\end{proof}
 \item Suppose you come across the following definition:
 \defn The \underline{inverse} of the conditional statement ``If P, then Q" is the conditional statement ``If not P, then not Q". 
 
 Write the inverse of the two conditionals you gave in parts \textbf{a} and \textbf{b}. Give an example (not used in class) of a \textit{false} conditional statement with a \textit{false} inverse, or explain why no such example can exist.
+\begin{proof}
+$P(x) \Rightarrow Q(x):$ If a shape is a rectangle then it must be a square \\
+$\neg P(x) \Rightarrow \neg Q(x):$ If a shape is not a rectangle, then it must not be a square. \\
+If I'm studying, then I'm learning math. \\
+If I'm not studying, then I'm not learning math.\\
+Both are false statements. I can be studying and learning math, but I can also be studying and not learning math, like if I'm learning philosophy. If I'm not studying, I could be learning math since I like to watch math youtube videos.
+\end{proof}
 \end{enumerate}
 
 
@@ -62,31 +78,182 @@ Write the inverse of the two conditionals you gave in parts \textbf{a} and \text
           \item Prove that for all positive real numbers $x$, the sum of $x$
     and its reciprocal is greater than or equal to $2$.
      \begin{proof}
-	    \end{proof}
+     Let $x \in \mathbb{R^+},$ then, the reciprocal of $x = \frac{1}{x}$. We don't need to worry about zero division since the positive real numbers do not include 0. In set notation, $x \in \mathbb{R}^+ \iff \{x \mid x \in (0,\infty) \}$. The sum of $x$ and its reciprocal is $x + \frac{1}{x}$. \\Assume, for the sake of contradiction, that there exists a positive real number $x$ such that the sum of $x$ and its reciprocal is less than 2. Then $x+\frac{1}{x}<2,$ now multiply both sides of the inequality by $x$, since $x \ne 0.$
+     \begin{center}
+     $x+\frac{1}{x} <2$\\
+     $x^2 + 1 < 2x$ \\
+     $x^2 -2x+1 < 0$ \\
+     $(x-1)(x-1) < 0$ \\
+     $(x-1)^2 < 0$
+     \end{center}
+     Under the domain of the real numbers, the square of any real number $x^2 \ge 0$. Since $x \in \mathbb{R},$ and $x-1$ is a real number, $(x-1)^2 < 0$ is a contradiction. Thus, the sum of a positive real number and its reciprocal must be greater than or equal to 2.
+	\end{proof}
     \item \label{perf} A perfect square is an integer $n$ for which there exists an
     integer $m$ such that $n=m^2$. Prove that if $n$ is a positive
     integer of the form $4k+2$ or $4k+3$ for some integer $k$, then $n$ is
     not a perfect square.
+    \begin{proof}
+    Let $n \in \mathbb{Z}^+,$ Assume for the sake of contradiction that $\exists n \in \mathbb{Z}^+$ of the form $n=4k+2$ or $n=4k+3$ for some $k \in \mathbb{Z}$ such that $n=m^2$. There are two cases, $n=4k+2$ and $4k+3$.
+    \begin{center}
+    $n=m^2$ \\
+    $4k+3 = m^2$
+    \end{center}
+    Since $m$ is an integer, it can be represented as either $2j$ or $2j+1$ for some $j \in \mathbb{Z}$ since $m$ can either be even or odd.
+    \begin{center}
+    $4k+3=m^2$ \\
+    $4k+3 = (2j)^2$ \\
+    $4k+3= 4j^2$
+    Or,
+    $4k+2=4j^2$
+    \end{center}
+    Since $j$ is an integer, $j^2$ is also an integer. So, $4j^2$ is divisible by 4 and therefore $4k+3$ is divisible by $4$. $k$ is also an integer. Essentially, a perfect square cannot have a remainder of 2 or 3 when divided by 4, it must be divisible by 4 or have a remainder of 1. In both cases, if $n=4k+2$ or $n=4k+3$ this is a contradiction. $4k+3$ has a remainder of 3 when divided by 4, and $4k+2$ has a remainder of 2 when divided by 4.
+    \begin{center}
+    $4k+3=m^2$ \\
+    $4k+3 = (2j+1)^2$ \\
+    $4k+3 = 4j^2 + 4j +1$ \\
+    $4k+3 = 4(j^2+j) + 1$
+    Or,
+    $4k+2 = 4(j^2+j)+1$
+    \end{center}
+    By similar logic to when $m$ is an even integer, $j$ is an integer, and $j^2+j$ must also be an integer. So $4(j^2+j)$ is divisible by 4 and $4(j^2+j) + 1$ has a remainder of 1 when divided by 4. However, since $4k +3$ has a remainder of 3 when divided by 4, and $4k+2$ has a remainder of 2 when divided by 4, they are both contradictions. Therefore, if $n$ is a positive integer of the form $4k+2$ or $4k+3$ for some integer k, $n$ must not be a perfect square.
+    \end{proof}
     \item Use your result for \#\ref{perf} above to prove 1.4, \#17. 
-        \item Use your result for \#\ref{perf} above to prove 1.4, \#18. 
+    \begin{proof}
+    From number 7, we can see that if $n$ is a positive integer of the form $4k+3$ for some integer $k$, then $\forall m \in \mathbb{Z}, n \ne m^2$. A perfect square must be divisible by 4 or it must have a remainder of 1 when divided by 4.  Therefore, $ \forall x,y\in \mathbb{Z}, x^2 \ne 4y+3$.
+    \end{proof}
+    \item Use your result for \#\ref{perf} above to prove 1.4, \#18. 
+    \begin{proof}
+    If $a,b,c \in \mathbb{Z}$ such that $a^2+b^2=c^2$, assume for the sake of contradiction that there $a$ and $b$ are both odd. Then, $\exists n,k \in \mathbb{Z}$ such that $a=2k+1$ and $b=2n+1$. 
+    \begin{center}
+    $a^2+b^2=c^2$ \\
+    $(2k+1)^2+(2n+1)^2$
+    $4k^2+4k+1+4n^2+4n+1$ \\
+    $4(k^2+n^2+k+n)+2$
+    \end{center}
+    Since we know that $c$ is an integer $a^2+b^2$ is a perfect square. We also know that a perfect square, when divided by 4 must have a remainder of 0 or a remainder of 1 from my previous proof. Since $k$ and $n$ are both integers, $k^2+n^2+k+n$ must be an integer. $a^2+b^2$ has a remainder of 2 when divided by 4, therefore $a^2+b^2$ cannot be a perfect square. Since $a^2+b^2$ is not a perfect square, neither is $c^2$, therefore $c$ cannot be an integer, which is a contradiction to our original premise that $c$ is an integer. Therefore, $a$ or $b$ must be even if $a^2+b^2=c^2$ for integer choices of $a,b,c$.
+    \end{proof}
 
 \item Prove that any real-valued solution to $x^3+x=1$ must be irrational.
+\begin{proof}
+Let $x \in \mathbb{R}$ be the solution to $x^3+x=1$. Assume for the sake of contradiction that $x \in \mathbb{Q}$ then, $\exists p,q \in \mathbb{Z}$ such that $x=\frac{p}{q}$, where $q \ne 0$.
+\begin{center}
+$x^3+x=1$ \\
+$\frac{p^3}{q^3} +\frac{p}{q} = 1$
+\end{center}
+Multiply both sides of the equation by $q^3$.
+\begin{center}
+$p^3 +pq^2=q^3$ \\
+\end{center}
+Now, we will do an even-odd case analysis to find contradictions. Since $p,q \in \mathbb{Z}, \exists n,k$ such that ($p=2k$ or $p=2k+1$) and ($q=2n$ or $q=2n+1$). Since $p$ and $q$ must not share any common factors, we know that they cannot both be even.
+\begin{center}
+$(2k)^3 +(2k)(2n+1)^2 = (2n+1)^2$ \\
+$8k^3+(2k)(4n^2+4n+1) = 4n^2+4n+1$ \\
+$2(4k^3+4kn^2+4kn+k) = 2(2n^2+2n)+1$
+\end{center}
+Since $k,n \in \mathbb{Z}$, then $(4k^3+4kn^2+4kn+k)$ must be an integer also, and $(2n^2+2n)$ must be an integer as well. The right side of the equation is an odd number while the left side of the equation is an even number. This is a contradiction.
+\begin{center}
+$(2k+1)^3 +(2k+1)(2n+1)^2 = (2n+1)^3$ \\
+$8 k^3 + 12 k^2 + 8 k n^2 + 8 k n + 8 k + 1 = 4n^2+4n+1$ \\
+$4(2k^3+3k^2+2kn^2+2kn+2k)+1= 4(n^2+n)+1$
+\end{center}
+Since $k$ and $n$ are both integers, $(2k^3+3k^2+2kn^2+2kn+2k+n^2+n)$ is an integer, and from above $n^2+n$ is also an integer. The left hand side of the equation when divided by 4 has a remainder of 2, while the right hand side of the equation has a remainder of 1 when divided by 4. This is a contradiction. 
+
+\end{proof}
 \item 2.1: \#1(a, b, c, d, e)
+\begin{itemize}
+\item[a.] The set of all positive integers between 15 and 21 inclusive.\\
+$\{x\in \mathbb{Z}^+ \mid 15 \le x \le 21  \} = \{15,16,17,18,19,20,21\}$
+\item[b.] The set consisting of the 8 smallest squares of positive integers. \\
+$\{x^2 \mid x \in \mathbb{Z^+},x \le 8\} = \{1,4,9,16,25,36,49,64\}$
+\item[c.] The set of all integers of absolute value less than 1. \\
+$\{ x \in \mathbb{Z} \mid  |x|<1 \} =\{0\}$
+\item[d.] The set consisting of the areas of circles of radius 1, 2, and 3. \\
+$\{\pi r^2 \mid  r\in \mathbb{N}, 1 \le r\le 3 \} = \{\pi,4\pi,9\pi\}$
+\item[e.] $\{x \in \mathbb{Z} \mid x^2 < 13 \}$ \\
+$\{-3,-2,-1,0,1,2,3\}$
+\end{itemize}
 \item For each part below, give an example, if there is one, of sets $A$, $B$, and $C$ satisfying the given statement:
 %\begin{multicols}{2}
 \begin{enumerate}
-\item $A\subseteq B$, $B\nsubseteq C$ and $A\subseteq C$.
+\item $A\subseteq B$, $B\nsubseteq C$ and $A\subseteq C$.\\
+\begin{proof}
+Let $A=\{1\}, B=\{1,2\}, C=\{1,3\}$. All properties hold.
+\end{proof}
 \item $A\subseteq B$, $B\subseteq C$ and $C\subseteq A$.
+\begin{proof}
+Let A = $\{1\}$, B= $\{1,2\}$, $C=\{1\}$ then $A \subseteq B$ and $A \subseteq C.$ But, $B \nsubseteq C$.
+\end{proof}
 \item $A\nsubseteq B$, $B\nsubseteq C$ and $A\subseteq C$.
+\begin{proof}
+Let $A=\{1\}, B=\{2\}, C=\{1,3\}$. Then all properties hold.
+\end{proof}
 \item $A\subseteq B$, $B\nsubseteq C$ and $A\nsubseteq C$.
+\begin{proof}
+Let $A=\{1\}, B=\{1,2\}, C=\{3\}$. All properties hold.
+\end{proof}
 \end{enumerate}
 %\end{multicols}
-\item 2.1: \# 14
-\item Let $A, B$, and $C$ be arbitrary sets. Prove that if $A-C \nsubseteq A-B$, then $B \nsubseteq C$.  
+\item 2.1: \# 14 Let $A= \{n \in \mathbb{Z} \mid n = 8t+ 7$ for some $t \in \mathbb{Z} \}$ and $B = \{n \in \mathbb{Z} \mid = 4t + 3$ for some $t \in \mathbb{Z}\}$.
+\begin{itemize}
+\item[a.] 
+$A = \{7, 15, 23, 31, 39 \}, B=\{3,7,11,15,19,23, 27,31,35,39\}$
+\item[b.]
+$n=8t+7=4(2t)+4+3=4(2t+1)+3$. Now, let $k \in \mathbb{Z} \ni k=2t+1$. Then, an integer $n \in A$ if $n=4k+3$ for some $k \in \mathbb{Z}$, this is the same form as the condition for an integer to be an element of $B$. So, $\forall n \in A, n\in B.$ Therefore, $A \subseteq B.$
+\item[c.]
+\begin{proof}
+The element 3 is a member of $B$ if we pick $t=0$. If we pick $t=-1, n=-1$ and if $t=0, n=7$. Since $-1<3<7$, there must be a $t\in \mathbb{Z} \ni 8t+7=3$, but since there is no integer between -1 and 0, 3 cannot be a member of $A$. So, $\exists n \in \mathbb{Z} \ni n\in B,n\not\in A$, thus $B \nsubseteq A$. 
+\end{proof}
+\end{itemize}
+\item Let $A, B$, and $C$ be arbitrary sets. Prove that if $A-C \nsubseteq A-B$, then $B \nsubseteq C$.
+\begin{proof}
+The contrapositive of the statement is if $B \subseteq C,$ then $A-C \subseteq A-B.$ If $B \subseteq C,$ then $\forall $ elements $e \in B, e \in C$. From the contrapositive of the premise, if element $e$ is not in C, then it must not be in B. So since 
+\end{proof}
 \item 2.2: \# 1
+\begin{itemize}
+\item[a.]
+$A \cup B = \{0,1,2,3,4,5,8\}$
+\item[b.]
+$A \cap B = \{1,4\}$
+\item[c.]
+$A \cap C = \{2,5\}$
+\item[e.]
+$A - (B \cup C)=\{3\}$
+\item[f.]
+$(A-B) \cup (A-C) = \{1,2,3,4,5\}$
+\item[h.]
+$(A \cap B) \cup (A \cap C) = \{1,2,4,5\}$
+\end{itemize}
 \item 2.2: \# 2
+\begin{itemize}
+\item[a.]
+$\overline{A} = \{6,7,8,...,20\}$
+\item[c.]
+$\overline{A \cap B} = \{2,3,5,6,...,20\}$
+\item[d.]
+$\overline{A} \cup \overline{B}=\{2,3,5,6,7,8,...,20\}$
+\item[e.]
+$\overline{A \cup B} = \{6,7,9,10,11,12,...,20\}$
+\end{itemize}
 \item 2.2: \# 4
-  	\end{enumerate}
+Let $U = \mathbb{R}, A=[1,4], B=(0,2),C=[2,\infty)$
+\begin{itemize}
+\item[A.]
+$A \cup B = [1,4]$
+\item[b.]
+$A \cap B = [1,2)$
+\item[c.]
+$A \cup B = [1,\infty)$
+\item[d.]
+$A \cap C = [2,4]$
+\item[e.]
+$B \cup C = $
+\end{itemize}
+\item Theorem 2.2.4: DeMorgan's Laws:
+\begin{proof}
+$\overline{A \cap B}$. To simplify, I'll begin by stating if an element $x \in \overline{A}, x \not\in A$. So, it is the negation of $e \in A$. Then, we can say that an element $x \in A \cap B \Rightarrow (x \in A) \wedge (x\in B).$ The negation would be, $x \in \overline{A \cap B} \Rightarrow (x\not\in A) \vee (x \not\in B)$. We can compare this truth to the truth of $\overline{A} \cup \overline{B}.$ This statement is true for an element $x$ if $(x \not\in A) \vee (x\not\in B)$. This is logically equivalent to the first statement, therefore the identity is true. If $\overline{A} \cup \overline{B} \iff \overline{A \cap B}.$
+
+\end{proof}
+    \end{enumerate}
 
 \label{LastPage}
 \end{document}
